@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Parties Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('images/parties.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .animation-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .party-names {
+            position: absolute;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            font-size: 2em;
+            color: #333; /* Darker color for the text */
+            animation: scroll 15s linear infinite;
+        }
+        .party-names div {
+            margin: 20px;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .info-container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-container">
+        <div class="party-names">
+            <div>Indian National Congress (INC)</div>
+            <div>Bharatiya Janata Party (BJP)</div>
+            <div>Aam Aadmi Party (AAP)</div>
+        </div>
+    </div>
+    <div class="info-container">
+        <h1>Political Parties in India</h1>
+        <p><strong>Indian National Congress (INC)</strong>: Founded in 1885, INC is one of India's oldest political parties. It played a pivotal role in the Indian independence movement and has been a major player in Indian politics since independence.</p>
+        <p><strong>Bharatiya Janata Party (BJP)</strong>: Established in 1980, the BJP is a major political party that promotes Hindu nationalism. It has been in power at the national level several times, including the current ruling party as of 2024.</p>
+        <p><strong>Aam Aadmi Party (AAP)</strong>: Founded in 2012, AAP emerged from the anti-corruption movement led by Arvind Kejriwal. The party focuses on issues of transparency, corruption, and governance.</p>
+    </div>
+</body>
+</html>
