@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Challenges of India's Democracy</title>
     <style>
         body {
-            background-image: url('images/india8.jpg');
+            background-image: url('https://github.com/Harveer264/harveer264/blob/Harveer264-patch-2/parties.jpg');
             background-size: cover;
             background-attachment: fixed;
             color: #333;
@@ -16,6 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
         .content {
             background-color: rgba(255, 255, 255, 0.8);
@@ -24,6 +25,7 @@
             max-width: 90%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             text-align: center;
+            margin-bottom: 20px;
         }
         h1 {
             color: #444;
@@ -40,7 +42,44 @@
         li {
             margin-bottom: 10px;
         }
+        .quiz {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .quiz h2 {
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .quiz button {
+            background-color: grey;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .quiz button:hover {
+            background-color: darkgrey;
+        }
     </style>
+    <script>
+        function checkAnswer(answer) {
+            const resultDiv = document.getElementById('result');
+            if (answer === '1947') {
+                resultDiv.textContent = 'Correct! India gained its independence in 1947.';
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.textContent = 'Incorrect. Please try again.';
+                resultDiv.style.color = 'red';
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="content">
@@ -52,6 +91,14 @@
             <li><strong>Political Instability:</strong> Frequent changes in leadership and coalition politics hinder consistent policy implementation.</li>
             <li><strong>Diversity and Regional Disparities:</strong> Addressing the diverse needs of all citizens can be challenging due to regional disparities.</li>
         </ul>
+    </div>
+    <div class="quiz">
+        <h2>Quiz: When did India gain its independence?</h2>
+        <button onclick="checkAnswer('1948')">1948</button>
+        <button onclick="checkAnswer('1947')">1947</button>
+        <button onclick="checkAnswer('1945')">1945</button>
+        <button onclick="checkAnswer('1950')">1950</button>
+        <div id="result" style="margin-top: 20px; font-size: 1.2em;"></div>
     </div>
 </body>
 </html>
